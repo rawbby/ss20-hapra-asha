@@ -1,0 +1,77 @@
+NET "Switches<7>" CLOCK_DEDICATED_ROUTE = FALSE;
+NET "Switches<5>" CLOCK_DEDICATED_ROUTE = FALSE;
+NET "Switches<1>" CLOCK_DEDICATED_ROUTE = FALSE;
+NET "Switches<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+
+NET "AN[0]" LOC = D14;
+NET "AN[1]" LOC = G14;
+NET "AN[2]" LOC = F14;
+NET "AN[3]" LOC = E13;
+
+NET "ClockIn" LOC = T9;
+NET "SevenSegmentOut[0]" LOC = E14;
+NET "SevenSegmentOut[1]" LOC = G13;
+NET "SevenSegmentOut[2]" LOC = N15;
+NET "SevenSegmentOut[3]" LOC = P15;
+NET "SevenSegmentOut[4]" LOC = R16;
+NET "SevenSegmentOut[5]" LOC = F13;
+NET "SevenSegmentOut[6]" LOC = N16;
+
+NET "ButtonsIn[0]" LOC = M13;
+NET "ButtonsIn[1]" LOC = M14;
+NET "ButtonsIn[2]" LOC = L13;
+NET "ButtonsIn[3]" LOC = L14;
+NET "LEDsOut[0]" LOC = K12;
+NET "LEDsOut[1]" LOC = P14;
+NET "LEDsOut[2]" LOC = L12;
+NET "LEDsOut[3]" LOC = N14;
+NET "LEDsOut[4]" LOC = P13;
+NET "LEDsOut[5]" LOC = N12;
+NET "LEDsOut[6]" LOC = P12;
+NET "LEDsOut[7]" LOC = P11;
+NET "Switches[0]" LOC = F12;
+NET "Switches[1]" LOC = G12;
+NET "Switches[2]" LOC = H14;
+NET "Switches[3]" LOC = H13;
+NET "Switches[4]" LOC = J14;
+NET "Switches[5]" LOC = J13;
+NET "Switches[6]" LOC = K14;
+NET "Switches[7]" LOC = K13;
+
+#INST "BTRXD_IBUF" IOB =TRUE;
+NET "BTRXD" LOC = C8;
+NET "BTTXD" LOC = D7;
+
+NET "PWM1FanInsideSignal" LOC = E7;
+NET "PWM2FanOutsideSignal" LOC = C7;
+NET "PWM3LightSignal" LOC = D8;
+NET "PWM4PeltierSignal" LOC = C9;
+NET "PeltierDirectionOut" LOC = C6;
+NET "HouseOnOff" LOC = D6;
+
+NET "SensorVibe" LOC = B4;
+NET "SensorDoor" LOC = B5;
+NET "ADCClock" LOC = B11;
+NET "ADCReceive" LOC = B10;
+NET "ADCSend" LOC = A8;
+NET "ADCChipSelect" LOC = A7;
+
+NET "ADCClock" IOSTANDARD = LVTTL;
+NET "ADCReceive" IOSTANDARD = LVTTL;
+NET "ADCSend" IOSTANDARD = LVTTL;
+NET "ADCChipSelect" IOSTANDARD = LVTTL;
+NET "BTRXD" IOSTANDARD = LVTTL;
+NET "BTTXD" IOSTANDARD = LVTTL;
+
+NET "PWM1FanInsideSignal" IOSTANDARD = LVTTL;
+NET "PWM2FanOutsideSignal" IOSTANDARD = LVTTL;
+NET "PWM3LightSignal" IOSTANDARD = LVTTL;
+NET "PWM4PeltierSignal" IOSTANDARD = LVTTL;
+NET "PeltierDirectionOut" IOSTANDARD = LVTTL;
+NET "HouseOnOff" IOSTANDARD = LVTTL;
+
+NET "SensorDoor" IOSTANDARD = LVTTL;
+NET "SensorVibe" IOSTANDARD = LVTTL;
+
+NET "ClockIn" TNM_NET = ClockIn;
+TIMESPEC TS_ClockIn = PERIOD "ClockIn" 20 ns HIGH 50%;
